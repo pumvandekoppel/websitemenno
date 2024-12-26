@@ -1,0 +1,268 @@
+/* ALGEMEEN */
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+@font-face {
+  font-family: "Reckless Neue";
+  src: url("fonts/RecklessNeueTRIAL-Medium.woff") format("woff");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+span.ontspannen-vallen {
+  /* font-style:italic; */
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+li,
+blockquote {
+  max-width: 70ch;
+}
+
+h1,
+h2, span.ontspannen-vallen {
+  font-family: "Reckless Neue";
+}
+
+h2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  text-decoration: underline;
+}
+
+a {
+    color: rgb(193, 142, 32);
+}
+
+hr {
+    border-color: rgb(140, 116, 66);
+    border-style: dashed;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8vh;
+}
+
+header #title {
+  background-color: #ffff00;
+  color: black;
+  padding: 4px;
+  transition: color 1s;
+  border: 2px solid black;
+  border-radius: 14px;
+  padding: 7px;
+  transition: 2.5s ease-in-out;
+  transition-property: background-color;
+  transition-delay: 2s;
+
+}
+
+header #title:hover {
+    background-color: white;
+    transition: 1.1s ease-in-out;
+    transition-property: background-color;
+}
+
+nav {
+  width: 50vw;
+  display: flex;
+  justify-content: end;
+  gap: 3vw;
+}
+
+nav * {
+  color: black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+}
+
+nav *:hover {
+    text-decoration: underline;
+}
+
+/* section > * {
+    max-width: 600px;
+} */
+
+/* MAIN */
+
+main div {
+  margin-bottom: 8vh;
+  padding-left: 0vw;
+  padding-right: 0vw;
+}
+
+main div div {
+  padding-left: 0vw;
+  padding-right: 0vw;
+}
+
+/* HORIZONTAL (FLEX) */
+
+.horizontal-images {
+  display: flex;
+  width: auto;
+  justify-content: space-evenly;
+  gap: 7vw;
+}
+
+.horizontal-paragraphs {
+  display: flex;
+  justify-content: start;
+  gap: 8vw;
+  margin-bottom: 0;
+}
+
+/* IMAGES */
+
+div.horizontal-images img {
+  object-fit: cover;
+  width: 35vw;
+  height: 35vw;
+}
+
+figure {
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+div#over {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div#over figure img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+div#ervaring blockquote {
+  margin: 4vw;
+}
+
+div#ervaring p {
+  text-align: right;
+}
+
+figcaption {
+  /* text-align: right; */
+  padding-top: 8px;
+  max-width: 28vw;
+}
+
+p {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+ul {
+  list-style-type: initial;
+}
+
+li {
+  font-size: 17px;
+}
+
+hr {
+  color: grey;
+}
+
+/* PROGRAMMA */
+
+ol li {
+  padding-bottom: 13px;
+}
+
+/*  PRAKTISCHE INFORMATIE */
+
+table {
+  margin-bottom: 14vh;
+}
+
+td {
+  padding-right: 20px;
+  line-height: 24px;
+}
+
+tr.blank-row {
+  line-height: 12px;
+}
+
+/* ERVARING */
+
+div#ervaring {
+  margin-bottom: 0;
+  margin-right: 4vw;
+}
+
+/* FAQ */
+
+h3.vraag {
+  cursor: pointer;
+}
+
+p.antwoord {
+  margin-bottom: 0;
+  display: none;
+}
+
+.vraag::after {
+  content: " ...";
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.vraag.active::after {
+  content: "";
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1vw;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a.external-link {
+  cursor: alias;
+  color: black;
+  text-decoration: none;
+}

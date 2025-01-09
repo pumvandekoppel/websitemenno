@@ -15,13 +15,23 @@
   src: url("fonts/RecklessNeueTRIAL-Medium.woff") format("woff");
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  margin-left: 4vw;
-  margin-right: 4vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
   font-family: Inter, Arial, Helvetica, sans-serif;
   background-color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow-x: hidden;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 span.ontspannen-vallen {
@@ -98,6 +108,15 @@ header div#logo {
   align-items: center;
 }
 
+header div#logo span#fake-italics {
+  display: inline-block;
+  transform: skewX(-16deg);
+}
+
+header div#logo:hover {
+  transform: skewX(0)
+}
+
 #hamburger {
   display: none;
   height: 80%;
@@ -116,6 +135,10 @@ header #logo:hover {
 
 header nav a:hover {
   color: black;
+}
+
+header nav a#aanmelden-link:hover {
+  color: rgb(239, 169, 18);
 }
 
 nav {
@@ -190,12 +213,12 @@ div.horizontal-paragraphs div {
 div.horizontal-paragraphs div img {
   margin-left: auto;
   margin-right: auto;
-  padding-right: 4vw;
 }
 
 div#programma div.horizontal-paragraphs {
   align-items: center;
   justify-content: space-between;
+  min-height: 25vw;
 }
 
 div#programma div.horizontal-paragraphs div {
@@ -204,6 +227,20 @@ div#programma div.horizontal-paragraphs div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: auto;
+}
+
+div#programma div.horizontal-paragraphs div:nth-child(1) {
+  margin-right: 4vw;
+}
+
+div#programma div.horizontal-paragraphs div:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 4vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* IMAGES */
@@ -227,9 +264,8 @@ div#over {
 }
 
 div#over figure img {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
+  height: 300px;
+  width: auto;
 }
 
 div#ervaring blockquote {
@@ -266,10 +302,6 @@ hr {
 }
 
 /* PROGRAMMA */
-
-ol li {
-  padding-bottom: 13px;
-}
 
 /*  PRAKTISCHE INFORMATIE */
 
@@ -338,6 +370,16 @@ footer ul {
   margin-top: -2vh;
 }
 
+footer ul#reclame {
+  font-weight: 250;
+}
+
+footer ul li a#up {
+  vertical-align: middle;
+  padding-top: 3px;
+  font-weight: 700;
+}
+
 a.external-link {
   cursor: alias;
   color: black;
@@ -352,6 +394,9 @@ div#mandarijntje {
   display: none;
   justify-content: end;
   align-items: end;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  overflow-x: visible;
 }
 
 div#mandarijntje img {
@@ -458,8 +503,17 @@ div#mandarijntje img {
     max-width: 88vw;
   }
 
-  ol {
-    padding-right: 40px;
+  div#programma div.horizontal-paragraphs {
+    padding-bottom: 20vw;
+  }
+
+  div.horizontal-paragraphs > * {
+    max-width: 92vw !important;
+  }
+
+  div#programma div.horizontal-paragraphs div:nth-child(2) img {
+    width: 88%;
+    height: auto;
   }
 
   blockquote {
@@ -474,7 +528,7 @@ div#mandarijntje img {
   div#over figure img {
     width: 61vw;
     height: 61vw;
-    border-radius: 100%;
+    /* border-radius: 100%; */
   }
 
   #over figcaption {
@@ -492,5 +546,11 @@ div#mandarijntje img {
     height: 41vh;
     margin-left: -4vw;
     display: none;
+  }
+
+  div#mandarijntje img {
+    padding-right: 6vw;
+    height: 80%;
+    width: auto;
   }
 }

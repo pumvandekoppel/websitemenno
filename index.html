@@ -12,7 +12,7 @@
     <header>
       <div id="logo">
         <h1 id="title">
-          <span class="ontspannen-vallen"><em>O</em>ntspannen vallen</span>
+          <span class="ontspannen-vallen"><span id="fake-italics">O</span>ntspannen vallen</span>
         </h1>
         <img
           id="hamburger"
@@ -21,7 +21,7 @@
         />
       </div>
       <nav>
-        <h1><a href="#aanmelden">Aanmelden</a></h1>
+        <h1><a href="#aanmelden" id="aanmelden-link">Aanmelden</a></h1>
         <h1><a href="#informatie">Informatie</a></h1>
         <h1><a href="#contact" id="appel">Contact</a></h1>
       </nav>
@@ -32,12 +32,12 @@
 
         <div class="horizontal-images">
           <figure>
-            <img src="assets/backward fall sepia - 4K-2.gif" alt="" />
+            <img src="assets/backward fall sepia - 4K-2.gif" id="stroef" alt="" />
             <!-- <figcaption>houterig vallen</figcaption> -->
             <figcaption>Wil je beter leren vallen?</figcaption>
           </figure>
           <figure>
-            <img src="assets/forward fall sepia - 4K-2.gif" alt="" />
+            <img src="assets/forward fall sepia - 4K-2.gif" id="ontspannen" alt="" />
             <!-- <figcaption><span class="ontspannen-vallen">Ontspannen vallen</span></figcaption> -->
             <figcaption>
               <span class="ontspannen-vallen"><em>O</em>ntspannen vallen</span>
@@ -98,6 +98,7 @@
             </div>
             <div><img src="assets/tekening-programma-1.png" alt="" /></div>
           </div>
+          
           <div class="horizontal-paragraphs">
             <div>
               <p>
@@ -345,7 +346,7 @@
           <div id="over">
             <h2>Over de trainer</h2>
             <figure>
-              <img src="assets/profile-placeholder.jpg" alt="" />
+              <img src="assets/trainer.png" alt="" />
               <figcaption>
                 <p><strong>Menno van de Koppel</strong></p>
               </figcaption>
@@ -418,10 +419,11 @@
       </div>
     </footer>
     <div id="mandarijntje" onscroll="handleElementVisibility()">
-      <img src="assets/bananenschil.png" alt="">
+      <img src="assets/bananenschil.png" alt="bananenschil">
     </div>
     <script src="faq.js"></script>
     <script src="hamburger.js"></script>
     <script src="mandarijntje.js"></script>
+    <script src="restart.js"></script>
   </body>
 </html>

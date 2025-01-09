@@ -12,7 +12,7 @@
     <header>
       <div id="logo">
         <h1 id="title">
-          <span class="ontspannen-vallen"><em>O</em>ntspannen vallen</span>
+          <span class="ontspannen-vallen"><span id="fake-italics">O</span>ntspannen vallen</span>
         </h1>
         <img
           id="hamburger"
@@ -21,7 +21,7 @@
         />
       </div>
       <nav>
-        <h1><a href="#aanmelden">Aanmelden</a></h1>
+        <h1><a href="#aanmelden" id="aanmelden-link">Aanmelden</a></h1>
         <h1><a href="#informatie">Informatie</a></h1>
         <h1><a href="#contact" id="appel">Contact</a></h1>
       </nav>
@@ -32,12 +32,12 @@
 
         <div class="horizontal-images">
           <figure>
-            <img src="assets/backward fall sepia - 4K-2.gif" alt="" />
+            <img src="assets/backward fall sepia - 4K-2.gif" id="stroef" alt="" />
             <!-- <figcaption>houterig vallen</figcaption> -->
             <figcaption>Wil je beter leren vallen?</figcaption>
           </figure>
           <figure>
-            <img src="assets/forward fall sepia - 4K-2.gif" alt="" />
+            <img src="assets/forward fall sepia - 4K-2.gif" id="ontspannen" alt="" />
             <!-- <figcaption><span class="ontspannen-vallen">Ontspannen vallen</span></figcaption> -->
             <figcaption>
               <span class="ontspannen-vallen"><em>O</em>ntspannen vallen</span>
@@ -78,36 +78,66 @@
             oncomfortabele posities die tot een val kunnen leiden.
           </p>
         </div>
-        <div>
-          <h2>Programma</h2>
-          <p>
-            Je werkt aan deze drie principes in een middagprogramma dat is
-            opgebouwd uit vijf blokken.
-          </p>
-          <ol>
-            <li>
-              <strong>Voorbereiding:</strong> maak je lichaam en geest gereed
-              voor impact en leer werken met je ademhaling om spanning te
-              verminderen.
-            </li>
-            <li>
-              <strong>Verbeter je eigen beweging:</strong> als je op de grond
-              gaat liggen en weer opstaat, hoe doe je dat en hoe kan je je
-              beweging vloeiender maken?
-            </li>
-            <li>
-              <strong>Grondwerk:</strong> vind manieren om vrij te bewegen op de
-              grond.
-            </li>
-            <li>
-              <strong>Contragewicht:</strong> ontdek meer bewegingsvrijheid door
-              je ledematen te gebruiken als contragewicht.
-            </li>
-            <li>
-              <strong>Zacht naar de grond:</strong> wen aan oncomfortabele
-              posities die tot een val kunnen leiden.
-            </li>
-          </ol>
+        <div id="programma">
+          <div>
+            <h2>Programma</h2>
+            <p>
+              Je werkt aan deze drie principes in een middagprogramma dat is
+              opgebouwd uit de volgende blokken:
+            </p>
+          </div>
+
+          <div class="horizontal-paragraphs">
+            <div>
+              <p>
+                <strong><em>Voorbereiding</em></strong
+                ><br /><br />
+                Maak je lichaam en geest gereed voor impact en leer werken met
+                je ademhaling om spanning te verminderen.
+              </p>
+            </div>
+            <div><img src="assets/tekening-programma-1.png" alt="" /></div>
+          </div>
+          
+          <div class="horizontal-paragraphs">
+            <div>
+              <p>
+                <strong><em>Verbeter je eigen beweging</em></strong
+                ><br /><br />Als je op de grond gaat liggen en weer opstaat, hoe
+                doe je dat en hoe kan je je beweging vloeiender maken?
+              </p>
+            </div>
+            <div><img src="assets/tekening-programma-2.png" alt="" /></div>
+          </div>
+          <div class="horizontal-paragraphs">
+            <div>
+              <p>
+                <strong><em>Grondwerk</em></strong
+                ><br /><br />
+                Vind manieren om vrij te bewegen op de grond.
+              </p>
+            </div>
+            <div><img src="assets/tekening-programma-3.png" alt="" /></div>
+          </div>
+          <div class="horizontal-paragraphs">
+            <div>
+              <p>
+                <strong><em>Contragewicht</em></strong
+                ><br /><br />Ontdek meer bewegingsvrijheid door je ledematen te
+                gebruiken als contragewicht.
+              </p>
+            </div>
+            <div><img src="assets/tekening-programma-4.png" alt="" /></div>
+          </div>
+          <div class="horizontal-paragraphs">
+            <div>
+              <p>
+                <strong><em>Zacht naar de grond</em></strong> <br /><br />Wen
+                aan oncomfortabele posities die tot een val kunnen leiden.
+              </p>
+            </div>
+            <div><img src="assets/tekening-programma-5.png" alt="" /></div>
+          </div>
         </div>
         <div>
           <h2>Praktische Informatie</h2>
@@ -316,7 +346,7 @@
           <div id="over">
             <h2>Over de trainer</h2>
             <figure>
-              <img src="assets/profile-placeholder.jpg" alt="" />
+              <img src="assets/trainer.png" alt="" />
               <figcaption>
                 <p><strong>Menno van de Koppel</strong></p>
               </figcaption>
@@ -388,9 +418,12 @@
         </ul>
       </div>
     </footer>
-    <div id="mandarijntje" onscroll="handleElementVisibility()"></div>
+    <div id="mandarijntje" onscroll="handleElementVisibility()">
+      <img src="assets/bananenschil.png" alt="bananenschil">
+    </div>
     <script src="faq.js"></script>
     <script src="hamburger.js"></script>
     <script src="mandarijntje.js"></script>
+    <script src="restart.js"></script>
   </body>
 </html>

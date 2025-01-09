@@ -39,7 +39,7 @@ p,
 td,
 li,
 blockquote {
-  max-width: 69ch;
+  max-width: 69ch !important;
 }
 
 h1,
@@ -108,8 +108,6 @@ header div#logo {
   align-items: center;
 }
 
-
-
 header #logo:hover {
   background-color: white;
   transition: 1.1s ease-in-out;
@@ -174,11 +172,38 @@ main div div {
   gap: 7vw;
 }
 
-.horizontal-paragraphs {
+div.horizontal-paragraphs {
   display: flex;
   justify-content: start;
   gap: 8vw;
   margin-bottom: 0;
+}
+
+div.horizontal-paragraphs div {
+  max-width: 46vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+div.horizontal-paragraphs div img {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 4vw;
+}
+
+div#programma div.horizontal-paragraphs {
+  align-items: center;
+  justify-content: space-between;
+}
+
+div#programma div.horizontal-paragraphs div {
+  max-width: 46vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* IMAGES */
@@ -325,6 +350,12 @@ div#mandarijntje {
   height: 77vh;
   margin-left: -4vw;
   display: none;
+  justify-content: end;
+  align-items: end;
+}
+
+div#mandarijntje img {
+  padding: 4vw;
 }
 
 .hide-on-desktop {
@@ -339,11 +370,10 @@ div#mandarijntje {
 /* ---------- */
 
 @media screen and (max-width: 755px) {
-
   .hide-on-desktop {
     display: initial;
   }
-  
+
   .hide-on-mobile {
     display: none;
   }
@@ -377,7 +407,6 @@ div#mandarijntje {
     margin-bottom: auto;
     padding-top: 1px;
     transform: rotate(0deg);
-
   }
 
   header h1#title {
@@ -413,7 +442,6 @@ div#mandarijntje {
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 
   div.horizontal-images img {

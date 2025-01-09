@@ -3,7 +3,7 @@ const appel = document.getElementById("appel");
 const mandarijntje = document.getElementById("mandarijntje");
 const banaan = document.getElementById("up");
 appel.addEventListener("click", () => {
-    mandarijntje.style.display = "block";
+    mandarijntje.style.display = "flex";
 });
 banaan.addEventListener("click", () => {
     mandarijntje.style.display = "none";

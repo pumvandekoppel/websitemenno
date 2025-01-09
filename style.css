@@ -19,6 +19,16 @@ html {
   overflow-x: hidden;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -75,6 +85,7 @@ a:hover {
 
 hr {
   border-style: dashed;
+  margin-bottom: 8vh;
 }
 
 /* HEADER */
@@ -110,15 +121,18 @@ header div#logo {
 
 header div#logo span#fake-italics {
   display: inline-block;
-  transform: skewX(-16deg);
+  transform: skewX(-19.3deg);
+  transition-property: transform;
+  transition: .42s ease-in-out;
+
 }
 
-header div#logo:hover {
-  transform: skewX(0)
+span#logo-titel:hover > span#fake-italics, span#logo-titel:active > span#fake-italics {
+  transform: skewX(1.4deg);
 }
 
 #hamburger {
-  display: none;
+  visibility: hidden;
   height: 80%;
   width: 37px;
   cursor: pointer;
@@ -137,9 +151,9 @@ header nav a:hover {
   color: black;
 }
 
-header nav a#aanmelden-link:hover {
+/* header nav a#aanmelden-link:hover {
   color: rgb(239, 169, 18);
-}
+} */
 
 nav {
   width: 50vw;
@@ -175,8 +189,8 @@ main section#aanmelden {
   scroll-margin-top: -70vh;
 }
 
-main div {
-  margin-bottom: 4vh;
+main > div, section > div {
+  margin-bottom: 10vh;
   padding-left: 0vw;
   padding-right: 0vw;
 }
@@ -199,7 +213,6 @@ div.horizontal-paragraphs {
   display: flex;
   justify-content: start;
   gap: 8vw;
-  margin-bottom: 0;
 }
 
 div.horizontal-paragraphs div {
@@ -271,7 +284,6 @@ div#over figure img {
 div#ervaring blockquote {
   margin: 4vw;
   margin-top: 4vw;
-  margin-bottom: 0;
 }
 
 div#ervaring p {
@@ -305,10 +317,6 @@ hr {
 
 /*  PRAKTISCHE INFORMATIE */
 
-table {
-  margin-bottom: 14vh;
-}
-
 td {
   padding-right: 39px;
   line-height: 24px;
@@ -321,7 +329,6 @@ tr.blank-row {
 /* ERVARING */
 
 div#ervaring {
-  margin-bottom: 0;
   margin-right: 4vw;
 }
 
@@ -377,7 +384,7 @@ footer ul#reclame {
 footer ul li a#up {
   vertical-align: middle;
   padding-top: 3px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 a.external-link {
@@ -447,7 +454,7 @@ div#mandarijntje img {
   }
 
   #hamburger {
-    display: initial;
+    visibility: visible;
     margin-top: auto;
     margin-bottom: auto;
     padding-top: 1px;
